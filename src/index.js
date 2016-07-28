@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProductList from './App';
+import App from './js/components/App';
 import './index.css';
 
 ReactDOM.render(
-  <ProductList />,
+  <App />,
   document.getElementById('root')
 );
