@@ -10,16 +10,20 @@ import '../../App.css';
 class App extends Component {
 	constructor() {
 		super();
-		this.state = {name: 'Nichole'}
+		this.state = {
+			title: "Welcome",
+		};
 	}
+
 	render() {
 		setTimeout(() => {
-			this.setState({name: "Bob"})
-		}, 1000)
+			this.setState({title: "Welcome, Nichole"});
+		}, 2000);
+
     return (
 	    <div>
-		    {this.state.name}
-		    <Header />
+		    <Header title={this.state.title} />
+		    <Header title={"Hey, there"} />
 		    <Footer />
 	    </div>
     );
