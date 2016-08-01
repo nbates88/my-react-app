@@ -15,15 +15,14 @@ class App extends Component {
 		};
 	}
 
-	render() {
-		setTimeout(() => {
-			this.setState({title: "Welcome, Nichole"});
-		}, 2000);
+	changeTitle(title) {
+		this.setState({title});
+	}
 
+	render() {
     return (
 	    <div>
-		    <Header title={this.state.title} />
-		    <Header title={"Hey, there"} />
+		    <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
 		    <Footer />
 	    </div>
     );
